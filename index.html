@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>حمّل تطبيق سفرة</title>
+<style>
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+       font-family:Tahoma,Arial,sans-serif;background:#fff7ef;color:#2b2b2b;text-align:center}
+  .box{padding:32px 24px;max-width:360px}
+  h1{font-size:26px;margin:0 0 8px}
+  p{color:#666;margin:0 0 24px}
+  a.btn{display:block;margin:12px 0;padding:14px;border-radius:12px;text-decoration:none;
+        font-size:18px;color:#fff}
+  .android{background:#1f8f4e}
+  .ios{background:#111}
+</style>
+<script>
+  var PLAY = "https://play.google.com/store/apps/details?id=app.abdoo.sofra";
+  var APPSTORE = "https://apps.apple.com/app/id6784112394";
+  var ua = navigator.userAgent || "";
+  var isIOS = /iPad|iPhone|iPod/i.test(ua) ||
+              (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  if (/android/i.test(ua)) { window.location.replace(PLAY); }
+  else if (isIOS) { window.location.replace(APPSTORE); }
+</script>
+</head>
+<body>
+  <div class="box">
+    <h1>تطبيق سفرة</h1>
+    <p>اختار المتجر المناسب لموبايلك</p>
+    <a class="btn android" href="https://play.google.com/store/apps/details?id=app.abdoo.sofra">تحميل لأندرويد (Google Play)</a>
+    <a class="btn ios" href="https://apps.apple.com/app/id6784112394">تحميل للآيفون (App Store)</a>
+  </div>
+</body>
+</html>
